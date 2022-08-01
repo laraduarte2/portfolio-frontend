@@ -1,0 +1,66 @@
+:root{
+    --gradient:radial-gradient(circle, rgba(155, 49, 0, 0.925) 8%, rgb(221, 44, 0) 18%, rgba(227,106,0,1) 53%, rgba(230, 208, 115, 0.959) 120%);
+}
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    overflow:hidden;
+    background-color: rgb(20, 20, 20);
+}
+
+.nav{
+    height:8vh;
+    width:100%;
+    background-color:grey;
+}
+
+.header{
+    width:100%;
+    min-height:92vh;
+}
+
+.header__container{
+    min-height:100%;
+    overflow:hidden;
+    background-color:rgb(20, 20, 20);
+}
+
+.circle{
+    height:320px;
+    width:560px;
+    border-radius:50%;
+    background-image:var(--gradient);
+    transform: translate(70vw);
+    margin-top:20vh;
+    background-size:200%;
+    animation:bg-gradient 10s infinite alternate;
+}
+
+
+.blur{
+    position:absolute;
+    backdrop-filter:blur(80px);
+    top:8vh;
+    left:0;
+    width:100%;
+    min-height:100%;
+}
+
+@keyframes bg-gradient{
+    0%{
+        background-position:top;
+    }
+    50%{
+        background-position:right;
+    }
+    75%{
+        background-position:bottom;
+    }
+    100%{
+        background-position:left;
+    }
+}
