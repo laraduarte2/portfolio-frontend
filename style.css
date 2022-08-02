@@ -14,16 +14,35 @@ html, body, h1, p{
 body{
     overflow:hidden;
     background-color: rgb(20, 20, 20);
+    
+    font-family:Arial, Helvetica, sans-serif;
 }
+
 
 
 @font-face {
-    font-family: 'dryhtenregular';
-    src: url('dryhtenregular-webfont.woff2') format('woff2'),
-         url('dryhtenregular-webfont.woff') format('woff');
+    font-family: 'beware';
+    src: url('beware.woff2') format('woff2'),
+         url('beware.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
+
+
+
+
+@font-face {
+    font-family: 'diamond_bridge_demoregular';
+    src: url('diamondbridgedemo.woff2') format('woff2'),
+         url('diamondbridgedemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 
 .nav{
     height:8vh;
@@ -89,7 +108,8 @@ body{
     width:16rem;
     font-size:2.8rem;
     padding-left:0.5rem;
-    font-family:'dryhtenregular';
+    font-family:diamond_bridge_demoregular;
+    font-weight:lighter;
 }
 .header__p{
     color:whitesmoke;
@@ -107,10 +127,11 @@ body{
     align-items:center;
     justify-content:center;
     display:flex;
-    margin-top:1.6rem;
+    margin-top:2.6rem;
     margin-bottom:1rem;
     font-size:1.2rem;
     font-weight:bold;
+
 }
 
 .socials{
@@ -125,6 +146,15 @@ body{
     padding-right:1.2rem;
 }
 
+.socials__a{
+    text-decoration: none;
+    color:Whitesmoke;
+}
+
+.socials__a:hover{
+    color:grey;
+}
+
 .arrow{
     font-size:2rem;
     color:whitesmoke;
@@ -134,15 +164,16 @@ body{
 @media screen and (min-width:525px) {
     .header__h1{
         width:100%;
-        margin-top:46vh;
+        margin-top:30vh;
         margin-bottom:0.4rem;
         padding-left:1.5rem;
+        font-size:4.5rem;
     }
     .header__p{
         padding-left:1.5rem;
     }
     .container{
-        padding-top:2.6rem;
+        padding-top:2.4rem;
         padding-left:1.5rem;
         display:flex;
         justify-content:space-between;
@@ -150,6 +181,7 @@ body{
     .arrow{
         padding-top:2rem;
         display:inline-block;
+        font-size:2.4rem;
     }
 
     .btn{
@@ -157,7 +189,7 @@ body{
     }
     .socials{
         justify-content:flex-end;
-        font-size:2rem;
+        font-size:2.4rem;
     }
     .fa-github, .fa-linkedin{
         padding-left:0.6rem;
@@ -165,4 +197,10 @@ body{
         padding-right:0.6rem;
     }
 
+}
+
+@media screen and (min-width:765px){
+    .header__h1{
+        margin-top:46vh;
+    }
 }
