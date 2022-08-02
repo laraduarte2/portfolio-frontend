@@ -1,15 +1,14 @@
 @import 'reset','variables';
 
-
 .header{
-    width:100%;
-    min-height:92vh;
+    height:92vh;
 }
 
 .header__container{
     min-height:100%;
     overflow:hidden;
     background-color:$neutral600;
+    position:relative;
 }
 
 .circle{
@@ -27,7 +26,7 @@
 .blur{
     position:absolute;
     backdrop-filter:blur(80px);
-    top:8vh;
+    top:0vh;
     left:0;
     width:100%;
     min-height:100%;
@@ -66,8 +65,9 @@
     color:$neutral100;
     padding-top:0.5rem;
     padding-left:0.5rem;
-}
+    font-family: 'Roboto', sans-serif;
 
+}
 
 
 
@@ -87,6 +87,8 @@
     margin-top:2.6rem;
     margin-bottom:1rem;
     padding:1rem;
+    font-family: 'Roboto', sans-serif;
+
 
     align-items:center;
     justify-content:center;
@@ -161,6 +163,7 @@
         transform:translateY(0%);
     }
 }
+
 
 @media screen and (min-width:525px) {
     .header__h1{

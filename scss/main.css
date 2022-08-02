@@ -8,7 +8,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgb(20, 20, 20);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgb(20, 20, 20);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -89,14 +89,14 @@ body {
   font-style: normal;
 }
 .header {
-  width: 100%;
-  min-height: 92vh;
+  height: 92vh;
 }
 
 .header__container {
   min-height: 100%;
   overflow: hidden;
   background-color: #161616;
+  position: relative;
 }
 
 .circle {
@@ -115,7 +115,7 @@ body {
   position: absolute;
   -webkit-backdrop-filter: blur(80px);
           backdrop-filter: blur(80px);
-  top: 8vh;
+  top: 0vh;
   left: 0;
   width: 100%;
   min-height: 100%;
@@ -169,6 +169,7 @@ body {
   color: #F0F0F0;
   padding-top: 0.5rem;
   padding-left: 0.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .btn {
@@ -185,6 +186,7 @@ body {
   margin-top: 2.6rem;
   margin-bottom: 1rem;
   padding: 1rem;
+  font-family: "Roboto", sans-serif;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -339,7 +341,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgb(20, 20, 20);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -374,10 +376,6 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-body, html {
-  overflow: hidden;
-}
-
 .nav {
   height: 8vh;
   display: flex;
@@ -393,6 +391,7 @@ body, html {
 .nav__cont--ul {
   display: flex;
   list-style: none;
+  font-family: "Roboto", sans-serif;
 }
 .nav__cont--ul-li a {
   padding-left: 2rem;
@@ -406,7 +405,7 @@ body, html {
 .nav__logo {
   color: #F0F0F0;
   font-family: lithium;
-  font-weight: lighter;
+  font-weight: 100;
   font-size: 1.4rem;
   letter-spacing: 5px;
   padding-left: 2rem;
@@ -431,15 +430,15 @@ body, html {
 }
 
 @media screen and (max-width: 768px) {
-  html, body, * {
+  body {
     overflow: hidden;
   }
   .nav__menu {
     display: inline-block;
-    padding: 0;
+    padding: 1;
   }
   .nav__cont {
-    border: solid red 2px;
+    border: none;
   }
   .nav__cont--ul {
     overflow: hidden;
@@ -495,4 +494,7 @@ body, html {
     opacity: 100%;
     transform: translateX(0%);
   }
+}
+.section {
+  background-color: magenta;
 }/*# sourceMappingURL=main.css.map */
