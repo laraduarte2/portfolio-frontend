@@ -1,9 +1,10 @@
 $neutral100:#F0F0F0;
-$neutral200:#CECECE;
+$neutral200:#c5c5c5;
 $neutral300:#999999;
 $neutral400:#545454;
 $neutral500:#242424;
-$neutral600:#1A1A1A;
+$neutral600:#161616;
+$neutral700:rgb(14, 14, 14);
 
 $gradient:radial-gradient(circle, rgba(155, 49, 0, 0.925) 8%, rgb(221, 44, 0) 18%, rgba(227,106,0,1) 53%, rgba(230, 208, 115, 0.959) 120%);
 
@@ -33,4 +34,39 @@ $spacing:(
          url('../assets/diamondbridgedemo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'mirra';
+    src: url('../assets/mirra.woff2') format('woff2'),
+         url('../assets/mirra.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fiori_doratiregular';
+    src: url('../assets/fioridoratiregular.woff2') format('woff2'),
+         url('../assets/fioridoratiregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'midtown';
+    src: url('../assets/midtown-groveed-regular.woff2') format('woff2'),
+         url('../assets/midtown-groveed-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lithium';
+    src: url('../assets/lithium_tf.woff2') format('woff2'),
+         url('../assets/lithium_tf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }

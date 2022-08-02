@@ -1,9 +1,9 @@
-html, body, h1, p {
+*, html, body, h1, p {
   margin: 0;
   padding: 0;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -19,12 +19,36 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-html, body, h1, p {
+@font-face {
+  font-family: "mirra";
+  src: url("../assets/mirra.woff2") format("woff2"), url("../assets/mirra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fiori_doratiregular";
+  src: url("../assets/fioridoratiregular.woff2") format("woff2"), url("../assets/fioridoratiregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "midtown";
+  src: url("../assets/midtown-groveed-regular.woff2") format("woff2"), url("../assets/midtown-groveed-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lithium";
+  src: url("../assets/lithium_tf.woff2") format("woff2"), url("../assets/lithium_tf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*, html, body, h1, p {
   margin: 0;
   padding: 0;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -40,12 +64,30 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.nav {
-  height: 8vh;
-  width: 100%;
-  background-color: grey;
+@font-face {
+  font-family: "mirra";
+  src: url("../assets/mirra.woff2") format("woff2"), url("../assets/mirra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: "fiori_doratiregular";
+  src: url("../assets/fioridoratiregular.woff2") format("woff2"), url("../assets/fioridoratiregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "midtown";
+  src: url("../assets/midtown-groveed-regular.woff2") format("woff2"), url("../assets/midtown-groveed-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lithium";
+  src: url("../assets/lithium_tf.woff2") format("woff2"), url("../assets/lithium_tf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .header {
   width: 100%;
   min-height: 92vh;
@@ -54,7 +96,7 @@ body {
 .header__container {
   min-height: 100%;
   overflow: hidden;
-  background-color: rgb(20, 20, 20);
+  background-color: #161616;
 }
 
 .circle {
@@ -124,29 +166,59 @@ body {
 }
 
 .header__p {
-  color: whitesmoke;
+  color: #F0F0F0;
   padding-top: 0.5rem;
   padding-left: 0.5rem;
 }
 
 .btn {
-  background-color: whitesmoke;
-  height: 2.6rem;
-  width: 12rem;
+  height: 2.8rem;
+  width: 14rem;
   border-radius: 25px;
+  display: inline-block;
+  background-color: #161616;
+  color: white;
+  font-size: 1rem;
+  font-weight: semi-bold;
+  border: solid 2px #F0F0F0;
+  outline: none;
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 2.6rem;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: White;
+  border-radius: 25px;
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+.btn-effect:hover {
+  color: black;
   font-weight: bold;
+}
+
+.btn-effect:hover::before {
+  width: 100%;
 }
 
 .socials {
   height: 200px;
   font-size: 1.6rem;
-  color: whitesmoke;
+  color: #F0F0F0;
   margin-top: 1.6rem;
   padding-left: 0.5rem;
   display: flex;
@@ -158,29 +230,58 @@ body {
 
 .socials__a {
   text-decoration: none;
-  color: Whitesmoke;
+  color: #F0F0F0;
 }
 
 .socials__a:hover {
-  color: grey;
+  color: #999999;
 }
 
 .arrow {
   font-size: 2rem;
-  color: whitesmoke;
+  color: #F0F0F0;
   display: none;
+  cursor: pointer;
+}
+.arrow:hover {
+  color: #999999;
+  -webkit-animation: arrow2 1.5s alternate infinite;
+          animation: arrow2 1.5s alternate infinite;
 }
 
+@-webkit-keyframes arrow2 {
+  0% {
+    transform: translateY(-3%);
+  }
+  75% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes arrow2 {
+  0% {
+    transform: translateY(-3%);
+  }
+  75% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @media screen and (min-width: 525px) {
   .header__h1 {
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 26vh;
     padding-left: 2rem;
     font-size: 4.5rem;
   }
   .header__p {
     padding-left: 2rem;
-    color: rgb(180, 180, 180);
+    color: #c5c5c5;
   }
   .container {
     padding-top: 2.4rem;
@@ -226,5 +327,172 @@ body {
   .container {
     padding-left: 10rem;
     padding-right: 10rem;
+  }
+}
+*, html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "diamond_bridge_demoregular";
+  src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mirra";
+  src: url("../assets/mirra.woff2") format("woff2"), url("../assets/mirra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fiori_doratiregular";
+  src: url("../assets/fioridoratiregular.woff2") format("woff2"), url("../assets/fioridoratiregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "midtown";
+  src: url("../assets/midtown-groveed-regular.woff2") format("woff2"), url("../assets/midtown-groveed-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lithium";
+  src: url("../assets/lithium_tf.woff2") format("woff2"), url("../assets/lithium_tf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body, html {
+  overflow: hidden;
+}
+
+.nav {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  overflow: hidden;
+  background-color: rgba(14, 14, 14, 0.7);
+}
+.nav__cont {
+  display: flex;
+  align-items: center;
+}
+.nav__cont--ul {
+  display: flex;
+  list-style: none;
+}
+.nav__cont--ul-li a {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: #F0F0F0;
+}
+.nav__cont--ul-li a:hover, .nav__cont--ul-li a:focus {
+  color: #999999;
+}
+.nav__logo {
+  color: #F0F0F0;
+  font-family: lithium;
+  font-weight: lighter;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
+  padding-left: 2rem;
+  padding-top: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.nav__menu {
+  display: none;
+  padding-right: 1rem;
+}
+
+.fa-bars {
+  font-size: 1.4rem;
+  color: #F0F0F0;
+}
+
+.nav-active {
+  transform: translateX(0%);
+  -webkit-animation: nav 1.5s;
+          animation: nav 1.5s;
+}
+
+@media screen and (max-width: 768px) {
+  html, body, * {
+    overflow: hidden;
+  }
+  .nav__menu {
+    display: inline-block;
+    padding: 0;
+  }
+  .nav__cont {
+    border: solid red 2px;
+  }
+  .nav__cont--ul {
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    z-index: 1999;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    transform: translateX(200%);
+    top: 8vh;
+    width: 36%;
+    height: 100%;
+    box-shadow: 0px 5px 5px 4px rgb(14, 14, 14);
+  }
+  .nav__cont--ul-li {
+    margin: 1rem;
+    padding-top: 1rem;
+  }
+  .nav-active {
+    transform: translateX(0%);
+    -webkit-animation: nav 1.5s;
+            animation: nav 1.5s;
+  }
+  .display-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav__cont--ul {
+    width: 60%;
+  }
+}
+@-webkit-keyframes nav {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+@keyframes nav {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
   }
 }/*# sourceMappingURL=main.css.map */

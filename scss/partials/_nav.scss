@@ -1,0 +1,118 @@
+@import 'reset','variables';
+
+body,html{
+    overflow:hidden;
+}
+.nav{
+    height:8vh;
+    display:flex;
+    justify-content:space-between;
+    align-content:center;
+    overflow:hidden;
+    background-color:rgba(14, 14, 14, 0.7);
+
+    &__cont{
+        display:flex;
+        align-items:center;
+        
+        &--ul{
+            display:flex;
+            list-style: none;
+            
+            &-li a{
+                padding-left:2rem;
+                padding-right:2rem;
+                text-decoration: none;
+                color:$neutral100;
+                &:hover,&:focus{
+                    color:$neutral300;
+                }
+            }
+        }
+    }
+    &__logo{
+        color:$neutral100;
+        font-family:lithium;
+        font-weight:lighter;
+        font-size:1.4rem;
+        letter-spacing:5px;
+
+        padding-left:2rem;
+        padding-top:0.4rem;
+        
+        display:flex;
+        align-items:center;
+        
+    }
+    &__menu{
+        display:none;
+        padding-right:1rem;
+    }
+}
+.fa-bars{
+    font-size:1.4rem;
+    color:$neutral100;
+}
+
+.nav-active{
+    transform:translateX(0%);
+    animation: nav 1.5s;}
+
+@media screen and (max-width:768px){
+    html,body,*{
+        overflow:hidden;
+    }
+    .nav__menu{
+        display:inline-block;
+        padding:0;
+    }
+    .nav__cont{
+        border:solid red 2px;
+
+    }
+    .nav__cont--ul{
+        overflow:hidden;
+        position:absolute;
+        right:0px;
+        background-color:rgba(0, 0, 0, 0.60);
+        backdrop-filter:blur(15px);
+        z-index:1999;
+        flex-direction: column;
+        align-items:space-around;
+        justify-content:center;
+        transform:translateX(200%);
+        top:8vh;
+
+        width:36%;
+        height:100%;
+        box-shadow:0px 5px 5px 4px $neutral700;
+        &-li{
+            margin:1rem;
+            padding-top:1rem;
+        }
+    }
+    .nav-active{
+    transform:translateX(0%);
+    animation: nav 1.5s;
+    }
+    .display-none{
+        display:none;
+    }
+}
+
+@media screen and (max-width:400px){
+    .nav__cont--ul{
+        width:60%;
+    }
+}
+
+@keyframes nav{
+    0%{
+        opacity:0;
+        transform:translateX(100%);
+    }
+    100%{
+        opacity:100%;
+        transform:translateX(0%);
+    }
+}
