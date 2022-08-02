@@ -1,0 +1,230 @@
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "diamond_bridge_demoregular";
+  src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "diamond_bridge_demoregular";
+  src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.nav {
+  height: 8vh;
+  width: 100%;
+  background-color: grey;
+}
+
+.header {
+  width: 100%;
+  min-height: 92vh;
+}
+
+.header__container {
+  min-height: 100%;
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+}
+
+.circle {
+  height: 420px;
+  width: 660px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, rgba(155, 49, 0, 0.925) 8%, rgb(221, 44, 0) 18%, rgb(227, 106, 0) 53%, rgba(230, 208, 115, 0.959) 120%);
+  transform: translate(70vw);
+  margin-top: 12vh;
+  background-size: 200%;
+  -webkit-animation: bg-gradient 10s infinite alternate;
+          animation: bg-gradient 10s infinite alternate;
+}
+
+.blur {
+  position: absolute;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  top: 8vh;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+@-webkit-keyframes bg-gradient {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes bg-gradient {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.header__blur--cont {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.header__h1 {
+  color: whitesmoke;
+  margin-top: 34vh;
+  width: 16rem;
+  font-size: 2.8rem;
+  padding-left: 0.5rem;
+  font-family: diamond_bridge_demoregular;
+  font-weight: lighter;
+}
+
+.header__p {
+  color: whitesmoke;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.btn {
+  background-color: whitesmoke;
+  height: 2.6rem;
+  width: 12rem;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.socials {
+  height: 200px;
+  font-size: 1.6rem;
+  color: whitesmoke;
+  margin-top: 1.6rem;
+  padding-left: 0.5rem;
+  display: flex;
+}
+
+.fa-github {
+  padding-right: 1.2rem;
+}
+
+.socials__a {
+  text-decoration: none;
+  color: Whitesmoke;
+}
+
+.socials__a:hover {
+  color: grey;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: whitesmoke;
+  display: none;
+}
+
+@media screen and (min-width: 525px) {
+  .header__h1 {
+    width: 100%;
+    margin-top: 20vh;
+    padding-left: 2rem;
+    font-size: 4.5rem;
+  }
+  .header__p {
+    padding-left: 2rem;
+    color: rgb(180, 180, 180);
+  }
+  .container {
+    padding-top: 2.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .arrow {
+    padding-top: 2rem;
+    display: inline-block;
+    font-size: 2.4rem;
+  }
+  .btn {
+    margin-top: 2rem;
+  }
+  .socials {
+    justify-content: flex-end;
+    font-size: 2.4rem;
+  }
+  .fa-github, .fa-linkedin {
+    padding-left: 0.6rem;
+    padding-top: 0.8rem;
+    padding-right: 0.6rem;
+  }
+}
+@media screen and (min-width: 765px) {
+  .header__h1 {
+    margin-top: 46vh;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .circle {
+    height: 800px;
+    width: 1400px;
+  }
+  .header__h1 {
+    padding-left: 10rem;
+  }
+  .header__p {
+    padding-left: 10rem;
+  }
+  .container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}/*# sourceMappingURL=main.css.map */

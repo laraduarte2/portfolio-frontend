@@ -1,36 +1,4 @@
-:root{
-    --gradient:radial-gradient(circle, rgba(155, 49, 0, 0.925) 8%, rgb(221, 44, 0) 18%, rgba(227,106,0,1) 53%, rgba(230, 208, 115, 0.959) 120%);
-}
-
-html, body, h1, p{
-    margin:0;
-    padding:0;
-}
-*{
-    box-sizing:border-box;
-}
-
-
-body{
-    overflow:hidden;
-    background-color: rgb(20, 20, 20);
-    
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-
-
-
-@font-face {
-    font-family: 'diamond_bridge_demoregular';
-    src: url('./assets/diamondbridgedemo.woff2') format('woff2'),
-         url('./assets/diamondbridgedemo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
+@import 'reset','variables';
 
 .nav{
     height:8vh;
@@ -53,7 +21,7 @@ body{
     height:420px;
     width:660px;
     border-radius:50%;
-    background-image:var(--gradient);
+    background-image:$gradient;
     transform: translate(70vw);
     margin-top:12vh;
     background-size:200%;
