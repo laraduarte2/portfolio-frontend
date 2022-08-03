@@ -162,7 +162,7 @@ body {
 
 .header__h1 {
   color: whitesmoke;
-  margin-top: 34vh;
+  margin-top: 26vh;
   width: 16rem;
   font-size: 2.8rem;
   padding-left: 0.5rem;
@@ -231,8 +231,8 @@ body {
   display: flex;
 }
 
-.fa-github {
-  padding-right: 1.2rem;
+.fa-linkedin, .fa-github {
+  padding-left: 1.5rem;
 }
 
 .socials__a {
@@ -282,7 +282,7 @@ body {
 @media screen and (min-width: 525px) {
   .header__h1 {
     width: 100%;
-    margin-top: 26vh;
+    margin-top: 20vh;
     padding-left: 2rem;
     font-size: 4.5rem;
   }
@@ -319,6 +319,9 @@ body {
   }
   .container {
     margin: 0 !important;
+  }
+  .fa-github {
+    margin-left: 4rem;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -438,7 +441,7 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .nav__menu {
     display: inline-block;
@@ -532,10 +535,24 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+*, html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .section {
   background-color: #161616;
   height: 100vh;
-  overflow: hidden;
 }
 
 .margin-top {
@@ -687,12 +704,12 @@ section .fa-brands {
 }
 .blob {
   border-radius: 30% 70% 70% 30%/30% 36% 64% 70%;
-  background-image: linear-gradient(45deg, rgba(155, 49, 0, 0.925) 8%, rgba(221, 44, 0, 0.945) 18%, rgb(227, 106, 0) 53%, rgba(231, 217, 154, 0.959) 120%);
+  background-image: linear-gradient(45deg, rgba(131, 42, 0, 0.952) 8%, rgba(221, 44, 0, 0.945) 18%, rgb(227, 106, 0) 53%, rgba(255, 240, 175, 0.959) 120%);
   height: 100px;
   width: 100px;
-  background-size: 200%;
-  -webkit-animation: blob 8s infinite alternate;
-          animation: blob 8s infinite alternate;
+  background-size: 250%;
+  -webkit-animation: blob 5s infinite alternate;
+          animation: blob 5s infinite alternate;
   -webkit-animation: move 10s infinite alternate ease-in-out;
           animation: move 10s infinite alternate ease-in-out;
 }
@@ -712,6 +729,9 @@ section .fa-brands {
 @media screen and (max-width: 768px) {
   .blob-cont {
     display: none;
+  }
+  .col-6 {
+    height: 60vh;
   }
 }
 .projects {
