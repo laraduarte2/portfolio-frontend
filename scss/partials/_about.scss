@@ -5,7 +5,9 @@
     padding:0!important;
     margin:0!important;
     min-height:100vh;
-    
+    &__main{
+        margin:2rem 0rem 2rem 0rem;
+    }
 }
 
 .skills{
@@ -35,7 +37,7 @@ section .fa-brands{
 }
 .section__row{
     margin:0rem 2rem 0rem 2rem;
-    padding: 2rem 0 0 0  !important;
+    padding: 2.5rem 0 0rem 0  !important;
 
     &--col{
         color:$neutral100;
@@ -107,13 +109,12 @@ section .fa-brands{
     height:140px;
     width:140px;
     background-size:150%;
-    animation:blob 3s infinite alternate;
-    animation:move 10s infinite alternate ease-in-out; 
+    animation:move 10s infinite alternate ease-in-out,blob 6s infinite alternate;
 }
 .blob__blur{ 
     height:280px;
     width:280px;
-    backdrop-filter:blur(30px);
+    backdrop-filter:blur(25px);
     border-radius:50% ;
     position:absolute;
     top:0;
@@ -126,7 +127,7 @@ section .fa-brands{
         display:none;
     }
     .section__main{
-        padding-bottom:4rem!important;
+        padding-bottom:2rem!important;
     }
 }
 @media screen and (min-width:768px)and(max-width:998px){

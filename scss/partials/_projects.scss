@@ -1,4 +1,120 @@
+@import 'variables','about';
+
 .projects{
-    background-color:lightblue;
     height:100vh;
+}
+
+.p__cont{
+    background-color:$neutral600;
+    height:100%;
+    width:100%;
+    padding:1rem;
+    position:relative;
+    display:flex;
+    justify-content: center;
+}
+
+.p__bg{
+    background-image:$gradient2;
+    background-size:150%;
+    height:200px;
+    width:200px;
+    padding:1rem;
+    border-radius: 50%;
+    animation: border 10s infinite alternate ease-in-out,blob 6s infinite alternate, wave 35s infinite alternate-reverse ease-in-out ;
+
+    
+}
+
+.p__blur{
+    backdrop-filter:blur(15px);
+    height:100%;
+    width:100%;
+    padding:1rem;
+    position:absolute;
+    top:0;
+    left:0;
+
+    &--row{
+        display:flex;
+        justify-content: center;
+        margin-top:0 !important;
+        position:absolute;
+        top:0;
+
+        &-c{
+            display:flex;
+            justify-content: center;
+            border: solid $neutral300 1px;
+            margin:2.5rem;
+            height:70vh;
+            width:24vw;
+            border-radius:35px;
+            backdrop-filter: blur(5px);
+            background-color:$neutral400t;
+        }
+    }
+
+    }
+
+
+.projects h4{
+    color:$neutral100;
+    position:relative;
+    margin:1rem;
+}
+
+.section__row--col-p h3{
+    color:$neutral100;
+    font-size:map-get($font-size,heading);
+    font-family:'diamond';
+
+}
+.hr-rounded{
+    border: top 2px;
+    color:$neutral200;
+}
+
+
+@keyframes border{
+    0%{
+        border-radius:62% 38% 64% 36% / 33% 24% 76% 67%  ;
+    }
+    100%{
+        border-radius:61% 39% 40% 60% / 44% 68% 32% 56% ;
+    }
+}
+@keyframes wave{
+    0%{
+        transform:translate(-100%, 95%);
+    }
+    50%{
+        transform:translate(0%,70%);
+    }
+    100%{
+        transform:translate(100%,95%);
+    }
+}
+
+@media screen and (max-width:768px){
+    .p__bg{
+        display:none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .p__blur--row-c{
+        padding:0;
+        margin-left:0;
+        margin-right:0;
+        width:80vw;
+    }
+}
+
+@media screen and (max-width:998px){
+    .p__blur--row-c{
+        padding:1rem;
+        margin-left:0.4rem;
+        margin-right:0.4rem;
+    }
 }
