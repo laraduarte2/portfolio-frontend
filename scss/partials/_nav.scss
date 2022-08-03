@@ -12,7 +12,7 @@
     &__cont{
         display:flex;
         align-items:center;
-        padding-top:1rem;
+        padding-top:0.4rem;
         
         &--ul{
             display:flex;
@@ -66,7 +66,7 @@
     }
     .nav__menu{
         display:inline-block;
-        padding:1;
+        padding-right:0.8rem;
     }
     .nav__cont{
         border:none;
