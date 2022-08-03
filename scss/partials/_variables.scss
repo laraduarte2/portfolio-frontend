@@ -7,7 +7,7 @@ $neutral600:#161616;
 $neutral700:rgb(14, 14, 14);
 
 $gradient:radial-gradient(circle, rgba(155, 49, 0, 0.925) 8%, rgb(221, 44, 0) 18%, rgba(227,106,0,1) 53%, rgba(230, 208, 115, 0.959) 120%);
-
+$gradient2:linear-gradient(45deg,rgba(155, 49, 0, 0.925) 8%, rgba(221, 44, 0, 0.945) 18%, rgba(227,106,0,1) 53%, rgba(231, 217, 154, 0.959) 120%);
 
 $font-weights:(
     "light":200,
@@ -18,7 +18,7 @@ $font-weights:(
 $font-size:(
     "body":1rem,
     "subheading":1.6rem,
-    "heading":2rem,
+    "heading":2.6rem,
     "h1-mobile":2.8,
     "h1-desktop":4.5
 );
@@ -29,7 +29,7 @@ $spacing:(
 );
 
 @font-face {
-    font-family: 'diamond_bridge_demoregular';
+    font-family: 'diamond';
     src: url('../assets/diamondbridgedemo.woff2') format('woff2'),
          url('../assets/diamondbridgedemo.woff') format('woff');
     font-weight: normal;

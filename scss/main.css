@@ -14,7 +14,7 @@ body {
 }
 
 @font-face {
-  font-family: "diamond_bridge_demoregular";
+  font-family: "diamond";
   src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -59,7 +59,7 @@ body {
 }
 
 @font-face {
-  font-family: "diamond_bridge_demoregular";
+  font-family: "diamond";
   src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -90,6 +90,10 @@ body {
 }
 .header {
   height: 92vh;
+}
+
+.container {
+  margin: 0 !important;
 }
 
 .header__container {
@@ -153,6 +157,7 @@ body {
 .header__blur--cont {
   margin-right: 2rem;
   margin-left: 2rem;
+  padding: 0.1rem;
 }
 
 .header__h1 {
@@ -161,7 +166,7 @@ body {
   width: 16rem;
   font-size: 2.8rem;
   padding-left: 0.5rem;
-  font-family: diamond_bridge_demoregular;
+  font-family: diamond;
   font-weight: lighter;
 }
 
@@ -178,7 +183,7 @@ body {
   border-radius: 25px;
   display: inline-block;
   background-color: #161616;
-  color: white;
+  color: #F0F0F0;
   font-size: 1rem;
   font-weight: semi-bold;
   border: solid 2px #F0F0F0;
@@ -202,14 +207,14 @@ body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: White;
+  background-color: #F0F0F0;
   border-radius: 25px;
   z-index: -1;
   transition: width 0.5s;
 }
 
 .btn-effect:hover {
-  color: black;
+  color: rgb(14, 14, 14);
   font-weight: bold;
 }
 
@@ -286,11 +291,11 @@ body {
     color: #c5c5c5;
   }
   .container {
-    padding-top: 2.4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: flex;
     justify-content: space-between;
+    min-width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
   .arrow {
     padding-top: 2rem;
@@ -304,15 +309,16 @@ body {
     justify-content: flex-end;
     font-size: 2.4rem;
   }
-  .fa-github, .fa-linkedin {
-    padding-left: 0.6rem;
-    padding-top: 0.8rem;
-    padding-right: 0.6rem;
+  .fa-github {
+    margin-right: 0.6rem;
   }
 }
 @media screen and (min-width: 765px) {
   .header__h1 {
     margin-top: 46vh;
+  }
+  .container {
+    margin: 0 !important;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -347,7 +353,7 @@ body {
 }
 
 @font-face {
-  font-family: "diamond_bridge_demoregular";
+  font-family: "diamond";
   src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -387,6 +393,7 @@ body {
 .nav__cont {
   display: flex;
   align-items: center;
+  padding-top: 1rem;
 }
 .nav__cont--ul {
   display: flex;
@@ -404,12 +411,12 @@ body {
 }
 .nav__logo {
   color: #F0F0F0;
-  font-family: lithium;
+  font-family: diamond;
   font-weight: 100;
   font-size: 1.4rem;
   letter-spacing: 5px;
   padding-left: 2rem;
-  padding-top: 0.4rem;
+  padding-top: 0.6rem;
   display: flex;
   align-items: center;
 }
@@ -495,6 +502,219 @@ body {
     transform: translateX(0%);
   }
 }
+@font-face {
+  font-family: "diamond";
+  src: url("../assets/diamondbridgedemo.woff2") format("woff2"), url("../assets/diamondbridgedemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mirra";
+  src: url("../assets/mirra.woff2") format("woff2"), url("../assets/mirra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fiori_doratiregular";
+  src: url("../assets/fioridoratiregular.woff2") format("woff2"), url("../assets/fioridoratiregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "midtown";
+  src: url("../assets/midtown-groveed-regular.woff2") format("woff2"), url("../assets/midtown-groveed-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lithium";
+  src: url("../assets/lithium_tf.woff2") format("woff2"), url("../assets/lithium_tf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .section {
-  background-color: magenta;
+  background-color: #161616;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.margin-top {
+  margin-top: 6rem;
+}
+
+.h2-2 {
+  color: #999999;
+  font-size: 2.6rem;
+  display: flex;
+  justify-content: right;
+  font-family: diamond;
+}
+
+.h2 {
+  color: #F0F0F0;
+  font-size: 2.6rem;
+  font-family: diamond;
+  display: flex;
+  justify-items: left;
+  align-content: center;
+  flex-direction: column;
+}
+
+.col-6 {
+  -webkit-animation: slidein 3s;
+          animation: slidein 3s;
+  margin-top: 10rem;
+  color: #F0F0F0;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: rgba(14, 14, 14, 0.7);
+  padding: 2rem 2rem 12rem 2rem;
+}
+.col-6 p {
+  font-size: 1rem;
+  color: #c5c5c5;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.skills {
+  background-color: rgba(14, 14, 14, 0.7);
+  height: 16vh;
+}
+
+section .fa-brands {
+  color: #F0F0F0;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr-rounded {
+  border-top: 2px solid #c5c5c5;
+  border-radius: 5px;
+  max-width: 90%;
+}
+
+.blob-cont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@-webkit-keyframes move {
+  0% {
+    transform: translate(18%, 12%);
+  }
+  33% {
+    transform: translate(-48%, -48%);
+  }
+  66% {
+    transform: translate(-80%, -12%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(18%, 12%);
+  }
+  33% {
+    transform: translate(-48%, -48%);
+  }
+  66% {
+    transform: translate(-80%, -12%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@-webkit-keyframes blob {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@keyframes blob {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.blob {
+  border-radius: 30% 70% 70% 30%/30% 36% 64% 70%;
+  background-image: linear-gradient(45deg, rgba(155, 49, 0, 0.925) 8%, rgba(221, 44, 0, 0.945) 18%, rgb(227, 106, 0) 53%, rgba(231, 217, 154, 0.959) 120%);
+  height: 100px;
+  width: 100px;
+  background-size: 200%;
+  -webkit-animation: blob 8s infinite alternate;
+          animation: blob 8s infinite alternate;
+  -webkit-animation: move 10s infinite alternate ease-in-out;
+          animation: move 10s infinite alternate ease-in-out;
+}
+
+.blob__blur {
+  height: 280px;
+  width: 280px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-90px, -92px);
+}
+
+@media screen and (max-width: 768px) {
+  .blob-cont {
+    display: none;
+  }
+}
+.projects {
+  background-color: lightblue;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

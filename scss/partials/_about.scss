@@ -1,3 +1,144 @@
+@import 'variables';
+
 .section{
-    background-color:magenta;
+    background-color:$neutral600;
+    height:100vh;
+    overflow:hidden;
+}
+
+.margin-top{
+    margin-top:6rem;
+}
+
+.h2-2{
+    color:$neutral300;
+    font-size:map-get($font-size,heading);
+    display:flex;
+    justify-content:right;
+    font-family:diamond;
+}
+.h2{
+    color:$neutral100;
+    font-size:map-get($font-size,heading);
+    font-family:diamond;
+    display:flex;
+    justify-items:left;
+    align-content:center;
+    flex-direction:column;
+}
+.col-6{
+    animation:slidein 3s;
+
+    margin-top:10rem;
+    color:$neutral100;
+    font-size:map-get($font-size,subheading);
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+    background-color:rgba(14, 14, 14, 0.7);
+    padding:2rem 2rem 12rem 2rem;
+    p{
+        font-size:map-get($font-size,body);
+        color:$neutral200;
+    }
+}
+
+@keyframes slidein{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+
+.skills{
+    background-color:rgba(14, 14, 14, 0.7);
+    height:16vh;
+}
+
+section .fa-brands{
+    color:$neutral100;
+    font-size:4rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.skills col-4{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hr-rounded{
+    border-top: 2px solid $neutral200;
+    border-radius: 5px;
+    max-width:90%;
+}
+
+
+.blob-cont{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+@keyframes move{
+    0%{
+        transform:translate(18%, 12%);
+    }
+    33%{
+        transform:translate(-48%,-48%);
+    }
+    66%{
+        transform:translate(-80%,-12%)
+    }
+    100%{
+        transform:translate(0%,0%);
+    }
+}
+
+
+@keyframes blob{
+    0%{
+        background-position:top;
+    }
+    50%{
+        background-position:right;
+    }
+    75%{
+        background-position:bottom;
+    }
+    100%{
+        background-position:left;
+    }
+}
+
+.blob{
+    border-radius:30% 70% 70% 30% / 30% 36% 64% 70% ;
+    background-image:$gradient2;
+    height:100px;
+    width:100px;
+    background-size:200%;
+    animation:blob 8s infinite alternate;
+    animation:move 10s infinite alternate ease-in-out; 
+}
+.blob__blur{ 
+    height:280px;
+    width:280px;
+    backdrop-filter:blur(30px);
+    border-radius:50% ;
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translate(-90px, -92px);
+}
+
+@media screen and (max-width:768px){
+    .blob-cont{
+        display:none;
+    }
 }

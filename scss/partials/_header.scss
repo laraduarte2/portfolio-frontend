@@ -3,7 +3,9 @@
 .header{
     height:92vh;
 }
-
+.container{
+    margin:0 !important;
+}
 .header__container{
     min-height:100%;
     overflow:hidden;
@@ -50,6 +52,7 @@
 .header__blur--cont{
     margin-right:2rem;
     margin-left:2rem;
+    padding:0.1rem;
 }
 
 .header__h1{
@@ -58,7 +61,7 @@
     width:16rem;
     font-size:2.8rem;
     padding-left:0.5rem;
-    font-family:diamond_bridge_demoregular;
+    font-family:diamond;
     font-weight:lighter;
 }
 .header__p{
@@ -78,7 +81,7 @@
     display:inline-block;
 
     background-color:$neutral600;
-    color:white;
+    color:$neutral100;
     font-size:1rem;
     font-weight:semi-bold;
     border:solid 2px $neutral100;
@@ -106,13 +109,13 @@
     left:0;
     width:0%;
     height:100%;
-    background-color:White;
+    background-color:$neutral100;
     border-radius:25px;
     z-index:-1;
     transition: width 0.5s;
 }
 .btn-effect:hover{
-    color:black;
+    color:$neutral700;
     font-weight:bold;
 }
 .btn-effect:hover::before{
@@ -177,11 +180,11 @@
         color:$neutral200;
     }
     .container{
-        padding-top:2.4rem;
-        padding-left:2rem;
-        padding-right:2rem;
         display:flex;
         justify-content:space-between;
+        min-width:100%;
+        padding-right:2rem;
+        padding-left:2rem;
     }
     .arrow{
         padding-top:2rem;
@@ -196,10 +199,8 @@
         justify-content:flex-end;
         font-size:2.4rem;
     }
-    .fa-github, .fa-linkedin{
-        padding-left:0.6rem;
-        padding-top:0.8rem;
-        padding-right:0.6rem;
+    .fa-github{
+        margin-right:0.6rem;
     }
 
 }
@@ -207,6 +208,9 @@
 @media screen and (min-width:765px){
     .header__h1{
         margin-top:46vh;
+    }
+    .container{
+        margin:0 !important;
     }
 }
 

@@ -12,6 +12,7 @@
     &__cont{
         display:flex;
         align-items:center;
+        padding-top:1rem;
         
         &--ul{
             display:flex;
@@ -32,13 +33,13 @@
     }
     &__logo{
         color:$neutral100;
-        font-family:lithium;
+        font-family:diamond;
         font-weight:100;
         font-size:1.4rem;
         letter-spacing:5px;
 
         padding-left:2rem;
-        padding-top:0.4rem;
+        padding-top:0.6rem;
 
         display:flex;
         align-items:center;
@@ -47,6 +48,7 @@
     &__menu{
         display:none;
         padding-right:1rem;
+        
     }
 }
 .fa-bars{
