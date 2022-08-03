@@ -539,7 +539,7 @@ body {
 }
 
 .margin-top {
-  margin-top: 6rem;
+  margin-top: 2.5rem;
 }
 
 .h2-2 {
@@ -563,7 +563,7 @@ body {
 .col-6 {
   -webkit-animation: slidein 3s;
           animation: slidein 3s;
-  margin-top: 10rem;
+  margin-top: 6.5rem;
   color: #F0F0F0;
   font-size: 1.6rem;
   display: flex;
