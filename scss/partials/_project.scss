@@ -1,0 +1,135 @@
+@import 'variables','animations';
+
+.projectCards{
+    position:relative;
+    margin:0;
+    padding:0;
+
+    //BLUR CONTAINER
+    &__blur{
+        height:100%;
+        width:100%;
+        position:absolute;
+
+        margin:0;
+        padding:0;
+
+        &--blob{
+            background-image:$gradient2;
+            background-size:150%;
+            height:200px;
+            width:200px;
+            padding:1rem;
+            border-radius: 50%;
+            animation: border 10s infinite alternate ease-in-out,blob 6s infinite alternate, wave1 35s infinite  alternate-reverse ease-in-out;
+        }
+        &--glass{
+            backdrop-filter:blur(15px);
+            min-height:100%;
+            width:100%;
+            padding:1rem;
+            position:absolute;
+            top:0;
+            left:0;
+
+        }
+
+
+    }
+
+
+    //CARDS ROW
+    &__cardsrow{
+        max-width:100%;
+
+
+
+    }
+}
+
+.card{
+    margin:1rem;
+    padding:1rem;
+
+    background-color:$neutral400t;
+    backdrop-filter:blur(15px);
+
+    color:$neutral100;
+
+    border:solid 1px $neutral300;
+    border-radius:25px;
+
+    & p{
+        font-family: 'Roboto', sans-serif;
+    }
+    & h5{
+        font-family: 'Roboto', sans-serif;
+    }
+
+    &__body{
+        padding:1rem;
+    }
+
+    &__btn{
+        display:flex;
+        justify-content: left;
+        align-items:center;
+    }
+    & button{
+        background-color:$neutral100;
+        color:$neutral600;
+
+        border-radius:25px;
+        border:none;
+
+        padding:1rem;
+
+        
+        width:200px;
+        height:50px;
+
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    &-github{
+        padding-left:2rem;
+        font-size:2rem;
+        color:$neutral100;
+    }
+}
+
+
+
+
+@media screen and (max-width:425px){
+    .projectCards__cardsrow{
+        flex-direction:column;
+    }
+}
+
+@media screen and (max-width:768px){
+    .projectCards__blur{
+        display:none;
+    }
+    
+}
+
+@media screen and (min-width:425px) and (max-width:650px){
+    .card-github{
+        padding: 0 !important;
+    }
+    .card{
+        margin: 0.2em !important;;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    .projectCards__blur--blob{
+        height:180px;
+        width:180px;
+        animation: border 10s infinite alternate ease-in-out,blob 6s infinite alternate, wave2 45s infinite  alternate-reverse ease-in-out;
+    }
+}

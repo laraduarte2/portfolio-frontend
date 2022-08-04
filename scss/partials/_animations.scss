@@ -1,0 +1,32 @@
+@import 'variables';
+
+@keyframes border{
+    0%{
+        border-radius:62% 38% 64% 36% / 33% 24% 76% 67%  ;
+    }
+    100%{
+        border-radius:61% 39% 40% 60% / 44% 68% 32% 56% ;
+    }
+}
+@keyframes wave1{
+    0%{
+        transform:translate(175%, 85%);
+    }
+    50%{
+        transform:translate(285%,70%);
+    }
+    100%{
+        transform:translate(385%,85%);
+    }
+}
+@keyframes wave2{
+    0%{
+        transform:translate(100%, 70%);
+    }
+    50%{
+        transform:translate(150%,50%);
+    }
+    100%{
+        transform:translate(200%,70%);
+    }
+}
