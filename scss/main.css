@@ -521,6 +521,13 @@ body {
   display: none;
   padding-right: 1rem;
 }
+.nav__btn {
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+}
+.nav__btn:hover {
+  background-color: #c5c5c5;
+}
 
 .fa-bars {
   font-size: 1.4rem;

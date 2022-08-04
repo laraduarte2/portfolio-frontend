@@ -50,6 +50,13 @@
         padding-right:1rem;
         
     }
+    &__btn{
+        border-radius:25px;
+        padding: 0 1rem 0 1rem;
+        &:hover{
+            background-color:$neutral200;
+        }
+    }
 }
 .fa-bars{
     font-size:1.4rem;
