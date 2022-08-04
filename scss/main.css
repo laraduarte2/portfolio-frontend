@@ -957,6 +957,12 @@ section .icons .fa-brands {
     transform: translate(200%, 70%);
   }
 }
+.proyectos {
+  font-family: "diamond";
+  font-size: 2.6rem;
+  color: #F0F0F0;
+}
+
 .projectCards {
   position: relative;
   margin: 0;
@@ -979,8 +985,8 @@ section .icons .fa-brands {
   animation: border 10s infinite alternate ease-in-out, blob 6s infinite alternate, wave1 35s infinite alternate-reverse ease-in-out;
 }
 .projectCards__blur--glass {
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   min-height: 100%;
   width: 100%;
   padding: 1rem;
@@ -990,20 +996,23 @@ section .icons .fa-brands {
 }
 .projectCards__cardsrow {
   max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .card {
-  margin: 1rem;
+  margin: 2rem;
   padding: 1rem;
   background-color: rgba(54, 54, 54, 0.5);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   color: #F0F0F0;
-  border: solid 1px #999999;
+  border: solid 1px #545454;
   border-radius: 25px;
 }
 .card p {
   font-family: "Roboto", sans-serif;
+  color: #c5c5c5;
 }
 .card h5 {
   font-family: "Roboto", sans-serif;
@@ -1027,24 +1036,48 @@ section .icons .fa-brands {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "roboto", sans-serif;
+}
+.card button:hover {
+  background-color: #c5c5c5;
 }
 .card-github {
   padding-left: 2rem;
   font-size: 2rem;
   color: #F0F0F0;
 }
+.card-github:hover {
+  color: #c5c5c5;
+}
 
 @media screen and (max-width: 425px) {
   .projectCards__cardsrow {
     flex-direction: column;
+    padding: 0 !important;
+  }
+  .card {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 525px) {
+  .projectCards__cardsrow {
+    flex-direction: column;
+    padding: 2rem !important;
+  }
+  .card__github {
+    padding: 0.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .projectCards__blur {
     display: none;
   }
+  .projectCards__cardsrow {
+    padding: 0;
+    margin: 0;
+  }
 }
-@media screen and (min-width: 425px) and (max-width: 650px) {
+@media screen and (min-width: 425px) and (max-width: 768px) {
   .card-github {
     padding: 0 !important;
   }
@@ -1052,11 +1085,21 @@ section .icons .fa-brands {
     margin: 0.2em !important;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 860px) {
+  .card {
+    margin: 0.5rem !important;
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .projectCards__blur--blob {
     height: 180px;
     width: 180px;
     animation: border 10s infinite alternate ease-in-out, blob 6s infinite alternate, wave2 45s infinite alternate-reverse ease-in-out;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projectCards__cardsrow {
+    margin: 0 3rem 0 3rem;
   }
 }
 @font-face {
@@ -1090,7 +1133,21 @@ section .icons .fa-brands {
   font-style: normal;
 }
 .footer {
-  height: 60vh;
-  background-color: magenta;
+  height: 25vh;
+  background-color: rgb(14, 14, 14);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer h6 {
+  font-family: "roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #c5c5c5;
+}
+.footer p {
+  color: #999999;
 }/*# sourceMappingURL=main.css.map */

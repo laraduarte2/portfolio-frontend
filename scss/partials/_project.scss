@@ -1,5 +1,12 @@
 @import 'variables','animations';
 
+
+.proyectos{
+    font-family:'diamond';
+    font-size:map-get($font-size,heading);
+    color:$neutral100;
+}
+
 .projectCards{
     position:relative;
     margin:0;
@@ -24,7 +31,7 @@
             animation: border 10s infinite alternate ease-in-out,blob 6s infinite alternate, wave1 35s infinite  alternate-reverse ease-in-out;
         }
         &--glass{
-            backdrop-filter:blur(15px);
+            backdrop-filter:blur(50px);
             min-height:100%;
             width:100%;
             padding:1rem;
@@ -41,14 +48,16 @@
     //CARDS ROW
     &__cardsrow{
         max-width:100%;
-
+        padding-left:2rem;
+        padding-right:2rem;
 
 
     }
 }
 
 .card{
-    margin:1rem;
+
+    margin:2rem;
     padding:1rem;
 
     background-color:$neutral400t;
@@ -56,11 +65,12 @@
 
     color:$neutral100;
 
-    border:solid 1px $neutral300;
+    border:solid 1px $neutral400;
     border-radius:25px;
 
     & p{
         font-family: 'Roboto', sans-serif;
+        color:$neutral200;
     }
     & h5{
         font-family: 'Roboto', sans-serif;
@@ -91,21 +101,41 @@
         display:flex;
         justify-content: center;
         align-items:center;
+
+        font-family:'roboto',sans-serif;
+        &:hover{
+            background-color:$neutral200;
+        }
     }
 
     &-github{
         padding-left:2rem;
         font-size:2rem;
         color:$neutral100;
+        &:hover{
+            color:$neutral200;
+        }
     }
 }
-
-
 
 
 @media screen and (max-width:425px){
     .projectCards__cardsrow{
         flex-direction:column;
+        padding: 0 !important;
+    }
+    .card{
+        margin:0.5rem 0 0.5rem 0;
+    }
+}
+
+@media screen and (min-width:425px)and(max-width:525px){
+    .projectCards__cardsrow{
+        flex-direction:column;
+        padding: 2rem !important;
+    }
+    .card__github{
+        padding:0.5rem;
     }
 }
 
@@ -113,15 +143,25 @@
     .projectCards__blur{
         display:none;
     }
+    .projectCards__cardsrow{
+        padding:0;
+        margin:0;
+    }
     
 }
 
-@media screen and (min-width:425px) and (max-width:650px){
+@media screen and (min-width:425px) and (max-width:768px){
     .card-github{
         padding: 0 !important;
     }
     .card{
         margin: 0.2em !important;;
+    }
+}
+
+@media screen and (min-width:768px)and(max-width:860px){
+    .card{
+        margin: 0.5rem !important;;
     }
 }
 
@@ -131,5 +171,12 @@
         height:180px;
         width:180px;
         animation: border 10s infinite alternate ease-in-out,blob 6s infinite alternate, wave2 45s infinite  alternate-reverse ease-in-out;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    .projectCards__cardsrow{
+        margin:0 3rem 0 3rem;
     }
 }
